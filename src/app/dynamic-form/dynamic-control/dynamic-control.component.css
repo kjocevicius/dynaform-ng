@@ -1,0 +1,10 @@
+.form-label {
+  font-weight: bolder;
+}
+
+.form-field {
+  width: 100%;
+  max-width: 300px;
+  align-self: left;
+  text-align: left;
+}

@@ -1,0 +1,60 @@
+<div [ngSwitch]="controlObject.type">
+
+  <div *ngSwitchCase="'Textbox'">
+    <div class="ui-fluid form-field">
+      <input type="text" pInputText [(ngModel)]="value" />
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'TextboxCurrency'">
+    <!-- TODO : custom component ???, use custom input mask -->
+    <div class="ui-fluid form-field">
+      <p-inputMask mask="999999,99" [(ngModel)]="value" ></p-inputMask>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'Checkbox'">
+    <div class="ui-fluid form-field">
+      <p-checkbox [(ngModel)]="value"></p-checkbox>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'Date'">
+    <div class="ui-fluid form-field">
+      <p-calendar autoWidth="false" [(ngModel)]="value"></p-calendar>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'Dropdown'">
+    <div class="ui-fluid form-field">
+      <!-- FIXME : had to force style for dropdown -->
+      <p-dropdown autoWidth="false" [style]="{'width':'100%', 'max-width':'300px'}" [options]="options" [(ngModel)]="value" placeholder="None" ></p-dropdown>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'Label'" class="form-label">
+    <div class="ui-fluid form-field">
+      {{controlObject?.label}}
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'Multiselect'">
+    <!-- TODO : custom component -->
+    <div class="ui-fluid form-field">
+      Multiselect {{controlObject?.label}}
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'Container'">
+    <df-container [container]="controlObject"></df-container>
+  </div>
+
+  <div *ngSwitchCase="'RepeatingContainer'">
+    <df-container [container]="controlObject"></df-container>
+  </div>
+
+  <div *ngSwitchDefault>
+    Unknown control type: {{controlObject.type}} ({{controlObject.label}})
+  </div>
+
+</div>

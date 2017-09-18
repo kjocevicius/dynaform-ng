@@ -1,0 +1,13 @@
+EXAMPLE dynamic form, Valid: {{dform.isValid()}}
+<br/>
+<df-dynamic-form #dform [form]="form" ></df-dynamic-form>
+<br/>
+<br/>
+EXAMPLE dynamic form, VALUE: {{dform?.formGroup?.value | json}}
+<br/>
+<br/>
+<!-- ERRORS IN FORM -->
+<!-- {{collectErrors(dform?.formGroup) | json}} -->
+<!-- <div *ngFor="let err of collectErrors(dform?.formGroup)" >
+  key: {{err.controlKey}}, errorKey: {{err.keyError}}, error: {{err.errorValue}}
+</div> -->

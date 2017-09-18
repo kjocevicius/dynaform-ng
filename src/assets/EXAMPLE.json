@@ -1,0 +1,1632 @@
+{
+    "version": "1.0",
+    "formName": "EXAMPLE",
+    "formSymbolicName": "EXAMPLE",
+    "controls": [
+        {
+            "optional": false,
+            "controls": [
+                {
+                    "name": "agreementDate",
+                    "label": "Agreement Date",
+                    "type": "Date",
+                    "validators": [
+                        {
+                            "type": "Required"
+                        }
+                    ]
+                },
+                {
+                    "classifier": [
+                        {
+                            "value": "English Law",
+                            "displayValue": "English Law"
+                        },
+                        {
+                            "value": "New York Law",
+                            "displayValue": "N.Y Law"
+                        }
+                    ],
+                    "name": "applicableLaw",
+                    "label": "Applicable Law",
+                    "type": "Dropdown",
+                    "validators": [
+                        {
+                            "type": "Required"
+                        }
+                    ]
+                },
+                {
+                    "classifier": [
+                        {
+                            "value": "Yes",
+                            "displayValue": "YES"
+                        },
+                        {
+                            "value": "No",
+                            "displayValue": "NO"
+                        }
+                    ],
+                    "name": "closeOutNetting",
+                    "label": "Close out Netting",
+                    "type": "Dropdown",
+                    "validators": [
+                        {
+                            "type": "Required"
+                        }
+                    ]
+                },
+                {
+                    "classifier": [
+                        {
+                            "value": "USD",
+                            "displayValue": "USD"
+                        },
+                        {
+                            "value": "SEK",
+                            "displayValue": "SEK"
+                        },
+                        {
+                            "value": "GBP",
+                            "displayValue": "GBP"
+                        },
+                        {
+                            "value": "EUR",
+                            "displayValue": "EUR"
+                        },
+                        {
+                            "value": "AED",
+                            "displayValue": "AED"
+                        },
+                        {
+                            "value": "ARS",
+                            "displayValue": "ARS"
+                        },
+                        {
+                            "value": "ATS",
+                            "displayValue": "ATS"
+                        },
+                        {
+                            "value": "AUD",
+                            "displayValue": "AUD"
+                        },
+                        {
+                            "value": "BDT",
+                            "displayValue": "BDT"
+                        },
+                        {
+                            "value": "BEF",
+                            "displayValue": "BEF"
+                        },
+                        {
+                            "value": "BHD",
+                            "displayValue": "BHD"
+                        },
+                        {
+                            "value": "BRL",
+                            "displayValue": "BRL"
+                        },
+                        {
+                            "value": "CAD",
+                            "displayValue": "CAD"
+                        },
+                        {
+                            "value": "CHF",
+                            "displayValue": "CHF"
+                        },
+                        {
+                            "value": "CLP",
+                            "displayValue": "CLP"
+                        },
+                        {
+                            "value": "CNH",
+                            "displayValue": "CNH"
+                        },
+                        {
+                            "value": "CNY",
+                            "displayValue": "CNY"
+                        },
+                        {
+                            "value": "COP",
+                            "displayValue": "COP"
+                        },
+                        {
+                            "value": "CYP",
+                            "displayValue": "CYP"
+                        },
+                        {
+                            "value": "CZK",
+                            "displayValue": "CZK"
+                        },
+                        {
+                            "value": "DEM",
+                            "displayValue": "DEM"
+                        },
+                        {
+                            "value": "DKK",
+                            "displayValue": "DKK"
+                        },
+                        {
+                            "value": "DZD",
+                            "displayValue": "DZD"
+                        },
+                        {
+                            "value": "EEK",
+                            "displayValue": "EEK"
+                        },
+                        {
+                            "value": "EGP",
+                            "displayValue": "EGP"
+                        },
+                        {
+                            "value": "ESP",
+                            "displayValue": "ESP"
+                        },
+                        {
+                            "value": "ETB",
+                            "displayValue": "ETB"
+                        },
+                        {
+                            "value": "FIM",
+                            "displayValue": "FIM"
+                        },
+                        {
+                            "value": "FRF",
+                            "displayValue": "FRF"
+                        },
+                        {
+                            "value": "HKD",
+                            "displayValue": "HKD"
+                        },
+                        {
+                            "value": "HRK",
+                            "displayValue": "HRK"
+                        },
+                        {
+                            "value": "HUF",
+                            "displayValue": "HUF"
+                        },
+                        {
+                            "value": "IDR",
+                            "displayValue": "IDR"
+                        },
+                        {
+                            "value": "IEP",
+                            "displayValue": "IEP"
+                        },
+                        {
+                            "value": "ILS",
+                            "displayValue": "ILS"
+                        },
+                        {
+                            "value": "INR",
+                            "displayValue": "INR"
+                        },
+                        {
+                            "value": "INT",
+                            "displayValue": "INT"
+                        },
+                        {
+                            "value": "IQD",
+                            "displayValue": "IQD"
+                        },
+                        {
+                            "value": "ISK",
+                            "displayValue": "ISK"
+                        },
+                        {
+                            "value": "ITL",
+                            "displayValue": "ITL"
+                        },
+                        {
+                            "value": "JOD",
+                            "displayValue": "JOD"
+                        },
+                        {
+                            "value": "JPY",
+                            "displayValue": "JPY"
+                        },
+                        {
+                            "value": "KES",
+                            "displayValue": "KES"
+                        },
+                        {
+                            "value": "KRW",
+                            "displayValue": "KRW"
+                        },
+                        {
+                            "value": "KWD",
+                            "displayValue": "KWD"
+                        },
+                        {
+                            "value": "LTL",
+                            "displayValue": "LTL"
+                        },
+                        {
+                            "value": "LVL",
+                            "displayValue": "LVL"
+                        },
+                        {
+                            "value": "MAD",
+                            "displayValue": "MAD"
+                        },
+                        {
+                            "value": "MRO",
+                            "displayValue": "MRO"
+                        },
+                        {
+                            "value": "MTL",
+                            "displayValue": "MTL"
+                        },
+                        {
+                            "value": "MUR",
+                            "displayValue": "MUR"
+                        },
+                        {
+                            "value": "MXN",
+                            "displayValue": "MXN"
+                        },
+                        {
+                            "value": "MYR",
+                            "displayValue": "MYR"
+                        },
+                        {
+                            "value": "NLG",
+                            "displayValue": "NLG"
+                        },
+                        {
+                            "value": "NOK",
+                            "displayValue": "NOK"
+                        },
+                        {
+                            "value": "NZD",
+                            "displayValue": "NZD"
+                        },
+                        {
+                            "value": "OMR",
+                            "displayValue": "OMR"
+                        },
+                        {
+                            "value": "PHP",
+                            "displayValue": "PHP"
+                        },
+                        {
+                            "value": "PKR",
+                            "displayValue": "PKR"
+                        },
+                        {
+                            "value": "PLN",
+                            "displayValue": "PLN"
+                        },
+                        {
+                            "value": "QAR",
+                            "displayValue": "QAR"
+                        },
+                        {
+                            "value": "RUB",
+                            "displayValue": "RUB"
+                        },
+                        {
+                            "value": "SAR",
+                            "displayValue": "SAR"
+                        },
+                        {
+                            "value": "SCR",
+                            "displayValue": "SCR"
+                        },
+                        {
+                            "value": "SGD",
+                            "displayValue": "SGD"
+                        },
+                        {
+                            "value": "SIT",
+                            "displayValue": "SIT"
+                        },
+                        {
+                            "value": "SKK",
+                            "displayValue": "SKK"
+                        },
+                        {
+                            "value": "SYP",
+                            "displayValue": "SYP"
+                        },
+                        {
+                            "value": "THB",
+                            "displayValue": "THB"
+                        },
+                        {
+                            "value": "TND",
+                            "displayValue": "TND"
+                        },
+                        {
+                            "value": "TRL",
+                            "displayValue": "TRL"
+                        },
+                        {
+                            "value": "TRY",
+                            "displayValue": "TRY"
+                        },
+                        {
+                            "value": "TTD",
+                            "displayValue": "TTD"
+                        },
+                        {
+                            "value": "TWD",
+                            "displayValue": "TWD"
+                        },
+                        {
+                            "value": "UAH",
+                            "displayValue": "UAH"
+                        },
+                        {
+                            "value": "VND",
+                            "displayValue": "VND"
+                        },
+                        {
+                            "value": "XAF",
+                            "displayValue": "XAF"
+                        },
+                        {
+                            "value": "XOF",
+                            "displayValue": "XOF"
+                        },
+                        {
+                            "value": "ZAR",
+                            "displayValue": "ZAR"
+                        },
+                        {
+                            "value": "ZAT",
+                            "displayValue": "ZAT"
+                        }
+                    ],
+                    "name": "terminationCurrency",
+                    "label": "Termination Currency",
+                    "type": "Dropdown",
+                    "validators": [
+                        {
+                            "type": "Required"
+                        }
+                    ]
+                },
+                {
+                    "classifier": [
+                        {
+                            "value": "Yes",
+                            "displayValue": "YES"
+                        },
+                        {
+                            "value": "No",
+                            "displayValue": "NO"
+                        }
+                    ],
+                    "name": "regulatoryApprovedNetting",
+                    "label": "Regulatory Approved Netting",
+                    "type": "Dropdown",
+                    "validators": [
+                        {
+                            "type": "Required"
+                        }
+                    ]
+                },
+                {
+                    "name": "physicalStorage",
+                    "label": "Physical Storage",
+                    "type": "Textbox",
+                    "validators": [
+                        {
+                            "type": "Required"
+                        }
+                    ]
+                }
+            ],
+            "horizontal": false,
+            "name": "agreementInformationModule",
+            "label": "Agreement Information",
+            "type": "Container",
+            "validators": []
+        },
+        {
+            "repeat": true,
+            "optional": true,
+            "controls": [
+                {
+                    "name": "customerBranch",
+                    "label": "Branch",
+                    "type": "Textbox",
+                    "validators": [
+                        {
+                            "type": "Required"
+                        }
+                    ]
+                }
+            ],
+            "horizontal": true,
+            "name": "customerMultibranchModule",
+            "label": "Customer multibranch",
+            "type": "RepeatingContainer",
+            "validators": []
+        },
+        {
+            "optional": false,
+            "controls": [
+                {
+                    "classifier": [
+                        {
+                            "value": "Yes",
+                            "displayValue": "YES"
+                        },
+                        {
+                            "value": "No",
+                            "displayValue": "NO"
+                        }
+                    ],
+                    "name": "someCreditUponMerger",
+                    "label": "some - Credit upon merger",
+                    "type": "Dropdown",
+                    "validators": [
+                        {
+                            "type": "Required"
+                        }
+                    ]
+                },
+                {
+                    "classifier": [
+                        {
+                            "value": "Yes",
+                            "displayValue": "YES"
+                        },
+                        {
+                            "value": "No",
+                            "displayValue": "NO"
+                        }
+                    ],
+                    "name": "customerCreditUponMerger",
+                    "label": "Customer - Credit upon merger",
+                    "type": "Dropdown",
+                    "validators": [
+                        {
+                            "type": "Required"
+                        }
+                    ]
+                }
+            ],
+            "horizontal": false,
+            "name": "terminationProvisionsModule",
+            "label": "Termination Provisions",
+            "type": "Container",
+            "validators": []
+        },
+        {
+            "optional": true,
+            "controls": [
+                {
+                    "optional": false,
+                    "controls": [
+                        {
+                            "classifier": [
+                                {
+                                    "value": "N/A",
+                                    "displayValue": "N/A"
+                                },
+                                {
+                                    "value": "1%",
+                                    "displayValue": "1"
+                                },
+                                {
+                                    "value": "2%",
+                                    "displayValue": "2"
+                                },
+                                {
+                                    "value": "3%",
+                                    "displayValue": "3"
+                                },
+                                {
+                                    "value": "4%",
+                                    "displayValue": "4"
+                                },
+                                {
+                                    "value": "5%",
+                                    "displayValue": "5"
+                                },
+                                {
+                                    "value": "6%",
+                                    "displayValue": "6"
+                                },
+                                {
+                                    "value": "7%",
+                                    "displayValue": "7"
+                                },
+                                {
+                                    "value": "8%",
+                                    "displayValue": "8"
+                                },
+                                {
+                                    "value": "9%",
+                                    "displayValue": "9"
+                                },
+                                {
+                                    "value": "10%",
+                                    "displayValue": "10"
+                                }
+                            ],
+                            "name": "someCrossDefaultNav",
+                            "label": "Nav",
+                            "type": "Dropdown",
+                            "validators": [
+                                {
+                                    "type": "Required"
+                                }
+                            ]
+                        },
+                        {
+                            "classifier": [
+                                {
+                                    "value": "N/A",
+                                    "displayValue": "N/A"
+                                },
+                                {
+                                    "value": "1%",
+                                    "displayValue": "1"
+                                },
+                                {
+                                    "value": "2%",
+                                    "displayValue": "2"
+                                },
+                                {
+                                    "value": "3%",
+                                    "displayValue": "3"
+                                },
+                                {
+                                    "value": "4%",
+                                    "displayValue": "4"
+                                },
+                                {
+                                    "value": "5%",
+                                    "displayValue": "5"
+                                },
+                                {
+                                    "value": "6%",
+                                    "displayValue": "6"
+                                },
+                                {
+                                    "value": "7%",
+                                    "displayValue": "7"
+                                },
+                                {
+                                    "value": "8%",
+                                    "displayValue": "8"
+                                },
+                                {
+                                    "value": "9%",
+                                    "displayValue": "9"
+                                },
+                                {
+                                    "value": "10%",
+                                    "displayValue": "10"
+                                }
+                            ],
+                            "name": "someCrossDefaultShareholder",
+                            "label": "Shareholder",
+                            "type": "Dropdown",
+                            "validators": [
+                                {
+                                    "type": "Required"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "someCrossDefaultAmount",
+                            "label": "Amount",
+                            "type": "TextboxCurrency",
+                            "validators": [
+                                {
+                                    "type": "Required"
+                                }
+                            ]
+                        },
+                        {
+                            "classifier": [
+                                {
+                                    "value": "USD",
+                                    "displayValue": "USD"
+                                },
+                                {
+                                    "value": "SEK",
+                                    "displayValue": "SEK"
+                                },
+                                {
+                                    "value": "GBP",
+                                    "displayValue": "GBP"
+                                },
+                                {
+                                    "value": "EUR",
+                                    "displayValue": "EUR"
+                                },
+                                {
+                                    "value": "AED",
+                                    "displayValue": "AED"
+                                },
+                                {
+                                    "value": "ARS",
+                                    "displayValue": "ARS"
+                                },
+                                {
+                                    "value": "ATS",
+                                    "displayValue": "ATS"
+                                },
+                                {
+                                    "value": "AUD",
+                                    "displayValue": "AUD"
+                                },
+                                {
+                                    "value": "BDT",
+                                    "displayValue": "BDT"
+                                },
+                                {
+                                    "value": "BEF",
+                                    "displayValue": "BEF"
+                                },
+                                {
+                                    "value": "BHD",
+                                    "displayValue": "BHD"
+                                },
+                                {
+                                    "value": "BRL",
+                                    "displayValue": "BRL"
+                                },
+                                {
+                                    "value": "CAD",
+                                    "displayValue": "CAD"
+                                },
+                                {
+                                    "value": "CHF",
+                                    "displayValue": "CHF"
+                                },
+                                {
+                                    "value": "CLP",
+                                    "displayValue": "CLP"
+                                },
+                                {
+                                    "value": "CNH",
+                                    "displayValue": "CNH"
+                                },
+                                {
+                                    "value": "CNY",
+                                    "displayValue": "CNY"
+                                },
+                                {
+                                    "value": "COP",
+                                    "displayValue": "COP"
+                                },
+                                {
+                                    "value": "CYP",
+                                    "displayValue": "CYP"
+                                },
+                                {
+                                    "value": "CZK",
+                                    "displayValue": "CZK"
+                                },
+                                {
+                                    "value": "DEM",
+                                    "displayValue": "DEM"
+                                },
+                                {
+                                    "value": "DKK",
+                                    "displayValue": "DKK"
+                                },
+                                {
+                                    "value": "DZD",
+                                    "displayValue": "DZD"
+                                },
+                                {
+                                    "value": "EEK",
+                                    "displayValue": "EEK"
+                                },
+                                {
+                                    "value": "EGP",
+                                    "displayValue": "EGP"
+                                },
+                                {
+                                    "value": "ESP",
+                                    "displayValue": "ESP"
+                                },
+                                {
+                                    "value": "ETB",
+                                    "displayValue": "ETB"
+                                },
+                                {
+                                    "value": "FIM",
+                                    "displayValue": "FIM"
+                                },
+                                {
+                                    "value": "FRF",
+                                    "displayValue": "FRF"
+                                },
+                                {
+                                    "value": "HKD",
+                                    "displayValue": "HKD"
+                                },
+                                {
+                                    "value": "HRK",
+                                    "displayValue": "HRK"
+                                },
+                                {
+                                    "value": "HUF",
+                                    "displayValue": "HUF"
+                                },
+                                {
+                                    "value": "IDR",
+                                    "displayValue": "IDR"
+                                },
+                                {
+                                    "value": "IEP",
+                                    "displayValue": "IEP"
+                                },
+                                {
+                                    "value": "ILS",
+                                    "displayValue": "ILS"
+                                },
+                                {
+                                    "value": "INR",
+                                    "displayValue": "INR"
+                                },
+                                {
+                                    "value": "INT",
+                                    "displayValue": "INT"
+                                },
+                                {
+                                    "value": "IQD",
+                                    "displayValue": "IQD"
+                                },
+                                {
+                                    "value": "ISK",
+                                    "displayValue": "ISK"
+                                },
+                                {
+                                    "value": "ITL",
+                                    "displayValue": "ITL"
+                                },
+                                {
+                                    "value": "JOD",
+                                    "displayValue": "JOD"
+                                },
+                                {
+                                    "value": "JPY",
+                                    "displayValue": "JPY"
+                                },
+                                {
+                                    "value": "KES",
+                                    "displayValue": "KES"
+                                },
+                                {
+                                    "value": "KRW",
+                                    "displayValue": "KRW"
+                                },
+                                {
+                                    "value": "KWD",
+                                    "displayValue": "KWD"
+                                },
+                                {
+                                    "value": "LTL",
+                                    "displayValue": "LTL"
+                                },
+                                {
+                                    "value": "LVL",
+                                    "displayValue": "LVL"
+                                },
+                                {
+                                    "value": "MAD",
+                                    "displayValue": "MAD"
+                                },
+                                {
+                                    "value": "MRO",
+                                    "displayValue": "MRO"
+                                },
+                                {
+                                    "value": "MTL",
+                                    "displayValue": "MTL"
+                                },
+                                {
+                                    "value": "MUR",
+                                    "displayValue": "MUR"
+                                },
+                                {
+                                    "value": "MXN",
+                                    "displayValue": "MXN"
+                                },
+                                {
+                                    "value": "MYR",
+                                    "displayValue": "MYR"
+                                },
+                                {
+                                    "value": "NLG",
+                                    "displayValue": "NLG"
+                                },
+                                {
+                                    "value": "NOK",
+                                    "displayValue": "NOK"
+                                },
+                                {
+                                    "value": "NZD",
+                                    "displayValue": "NZD"
+                                },
+                                {
+                                    "value": "OMR",
+                                    "displayValue": "OMR"
+                                },
+                                {
+                                    "value": "PHP",
+                                    "displayValue": "PHP"
+                                },
+                                {
+                                    "value": "PKR",
+                                    "displayValue": "PKR"
+                                },
+                                {
+                                    "value": "PLN",
+                                    "displayValue": "PLN"
+                                },
+                                {
+                                    "value": "QAR",
+                                    "displayValue": "QAR"
+                                },
+                                {
+                                    "value": "RUB",
+                                    "displayValue": "RUB"
+                                },
+                                {
+                                    "value": "SAR",
+                                    "displayValue": "SAR"
+                                },
+                                {
+                                    "value": "SCR",
+                                    "displayValue": "SCR"
+                                },
+                                {
+                                    "value": "SGD",
+                                    "displayValue": "SGD"
+                                },
+                                {
+                                    "value": "SIT",
+                                    "displayValue": "SIT"
+                                },
+                                {
+                                    "value": "SKK",
+                                    "displayValue": "SKK"
+                                },
+                                {
+                                    "value": "SYP",
+                                    "displayValue": "SYP"
+                                },
+                                {
+                                    "value": "THB",
+                                    "displayValue": "THB"
+                                },
+                                {
+                                    "value": "TND",
+                                    "displayValue": "TND"
+                                },
+                                {
+                                    "value": "TRL",
+                                    "displayValue": "TRL"
+                                },
+                                {
+                                    "value": "TRY",
+                                    "displayValue": "TRY"
+                                },
+                                {
+                                    "value": "TTD",
+                                    "displayValue": "TTD"
+                                },
+                                {
+                                    "value": "TWD",
+                                    "displayValue": "TWD"
+                                },
+                                {
+                                    "value": "UAH",
+                                    "displayValue": "UAH"
+                                },
+                                {
+                                    "value": "VND",
+                                    "displayValue": "VND"
+                                },
+                                {
+                                    "value": "XAF",
+                                    "displayValue": "XAF"
+                                },
+                                {
+                                    "value": "XOF",
+                                    "displayValue": "XOF"
+                                },
+                                {
+                                    "value": "ZAR",
+                                    "displayValue": "ZAR"
+                                },
+                                {
+                                    "value": "ZAT",
+                                    "displayValue": "ZAT"
+                                }
+                            ],
+                            "name": "someCrossDefaultCurrency",
+                            "label": "Currency",
+                            "type": "Dropdown",
+                            "validators": [
+                                {
+                                    "type": "Required"
+                                }
+                            ]
+                        }
+                    ],
+                    "horizontal": true,
+                    "name": "someCrossDefaultThresholdModule",
+                    "label": "some Threshold",
+                    "type": "Container",
+                    "validators": []
+                }
+            ],
+            "horizontal": false,
+            "name": "someCrossDefaultModule",
+            "label": "some Cross Default",
+            "type": "Container",
+            "validators": []
+        },
+        {
+            "optional": true,
+            "controls": [
+                {
+                    "optional": false,
+                    "controls": [
+                        {
+                            "classifier": [
+                                {
+                                    "value": "N/A",
+                                    "displayValue": "N/A"
+                                },
+                                {
+                                    "value": "1%",
+                                    "displayValue": "1"
+                                },
+                                {
+                                    "value": "2%",
+                                    "displayValue": "2"
+                                },
+                                {
+                                    "value": "3%",
+                                    "displayValue": "3"
+                                },
+                                {
+                                    "value": "4%",
+                                    "displayValue": "4"
+                                },
+                                {
+                                    "value": "5%",
+                                    "displayValue": "5"
+                                },
+                                {
+                                    "value": "6%",
+                                    "displayValue": "6"
+                                },
+                                {
+                                    "value": "7%",
+                                    "displayValue": "7"
+                                },
+                                {
+                                    "value": "8%",
+                                    "displayValue": "8"
+                                },
+                                {
+                                    "value": "9%",
+                                    "displayValue": "9"
+                                },
+                                {
+                                    "value": "10%",
+                                    "displayValue": "10"
+                                }
+                            ],
+                            "name": "customerCrossDefaultNav",
+                            "label": "Nav",
+                            "type": "Dropdown",
+                            "validators": [
+                                {
+                                    "type": "Required"
+                                }
+                            ]
+                        },
+                        {
+                            "classifier": [
+                                {
+                                    "value": "N/A",
+                                    "displayValue": "N/A"
+                                },
+                                {
+                                    "value": "1%",
+                                    "displayValue": "1"
+                                },
+                                {
+                                    "value": "2%",
+                                    "displayValue": "2"
+                                },
+                                {
+                                    "value": "3%",
+                                    "displayValue": "3"
+                                },
+                                {
+                                    "value": "4%",
+                                    "displayValue": "4"
+                                },
+                                {
+                                    "value": "5%",
+                                    "displayValue": "5"
+                                },
+                                {
+                                    "value": "6%",
+                                    "displayValue": "6"
+                                },
+                                {
+                                    "value": "7%",
+                                    "displayValue": "7"
+                                },
+                                {
+                                    "value": "8%",
+                                    "displayValue": "8"
+                                },
+                                {
+                                    "value": "9%",
+                                    "displayValue": "9"
+                                },
+                                {
+                                    "value": "10%",
+                                    "displayValue": "10"
+                                }
+                            ],
+                            "name": "customerCrossDefaultShareholder",
+                            "label": "Shareholder",
+                            "type": "Dropdown",
+                            "validators": [
+                                {
+                                    "type": "Required"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "customerCrossDefaultAmount",
+                            "label": "Amount",
+                            "type": "TextboxCurrency",
+                            "validators": [
+                                {
+                                    "type": "Required"
+                                }
+                            ]
+                        },
+                        {
+                            "classifier": [
+                                {
+                                    "value": "USD",
+                                    "displayValue": "USD"
+                                },
+                                {
+                                    "value": "SEK",
+                                    "displayValue": "SEK"
+                                },
+                                {
+                                    "value": "GBP",
+                                    "displayValue": "GBP"
+                                },
+                                {
+                                    "value": "EUR",
+                                    "displayValue": "EUR"
+                                },
+                                {
+                                    "value": "AED",
+                                    "displayValue": "AED"
+                                },
+                                {
+                                    "value": "ARS",
+                                    "displayValue": "ARS"
+                                },
+                                {
+                                    "value": "ATS",
+                                    "displayValue": "ATS"
+                                },
+                                {
+                                    "value": "AUD",
+                                    "displayValue": "AUD"
+                                },
+                                {
+                                    "value": "BDT",
+                                    "displayValue": "BDT"
+                                },
+                                {
+                                    "value": "BEF",
+                                    "displayValue": "BEF"
+                                },
+                                {
+                                    "value": "BHD",
+                                    "displayValue": "BHD"
+                                },
+                                {
+                                    "value": "BRL",
+                                    "displayValue": "BRL"
+                                },
+                                {
+                                    "value": "CAD",
+                                    "displayValue": "CAD"
+                                },
+                                {
+                                    "value": "CHF",
+                                    "displayValue": "CHF"
+                                },
+                                {
+                                    "value": "CLP",
+                                    "displayValue": "CLP"
+                                },
+                                {
+                                    "value": "CNH",
+                                    "displayValue": "CNH"
+                                },
+                                {
+                                    "value": "CNY",
+                                    "displayValue": "CNY"
+                                },
+                                {
+                                    "value": "COP",
+                                    "displayValue": "COP"
+                                },
+                                {
+                                    "value": "CYP",
+                                    "displayValue": "CYP"
+                                },
+                                {
+                                    "value": "CZK",
+                                    "displayValue": "CZK"
+                                },
+                                {
+                                    "value": "DEM",
+                                    "displayValue": "DEM"
+                                },
+                                {
+                                    "value": "DKK",
+                                    "displayValue": "DKK"
+                                },
+                                {
+                                    "value": "DZD",
+                                    "displayValue": "DZD"
+                                },
+                                {
+                                    "value": "EEK",
+                                    "displayValue": "EEK"
+                                },
+                                {
+                                    "value": "EGP",
+                                    "displayValue": "EGP"
+                                },
+                                {
+                                    "value": "ESP",
+                                    "displayValue": "ESP"
+                                },
+                                {
+                                    "value": "ETB",
+                                    "displayValue": "ETB"
+                                },
+                                {
+                                    "value": "FIM",
+                                    "displayValue": "FIM"
+                                },
+                                {
+                                    "value": "FRF",
+                                    "displayValue": "FRF"
+                                },
+                                {
+                                    "value": "HKD",
+                                    "displayValue": "HKD"
+                                },
+                                {
+                                    "value": "HRK",
+                                    "displayValue": "HRK"
+                                },
+                                {
+                                    "value": "HUF",
+                                    "displayValue": "HUF"
+                                },
+                                {
+                                    "value": "IDR",
+                                    "displayValue": "IDR"
+                                },
+                                {
+                                    "value": "IEP",
+                                    "displayValue": "IEP"
+                                },
+                                {
+                                    "value": "ILS",
+                                    "displayValue": "ILS"
+                                },
+                                {
+                                    "value": "INR",
+                                    "displayValue": "INR"
+                                },
+                                {
+                                    "value": "INT",
+                                    "displayValue": "INT"
+                                },
+                                {
+                                    "value": "IQD",
+                                    "displayValue": "IQD"
+                                },
+                                {
+                                    "value": "ISK",
+                                    "displayValue": "ISK"
+                                },
+                                {
+                                    "value": "ITL",
+                                    "displayValue": "ITL"
+                                },
+                                {
+                                    "value": "JOD",
+                                    "displayValue": "JOD"
+                                },
+                                {
+                                    "value": "JPY",
+                                    "displayValue": "JPY"
+                                },
+                                {
+                                    "value": "KES",
+                                    "displayValue": "KES"
+                                },
+                                {
+                                    "value": "KRW",
+                                    "displayValue": "KRW"
+                                },
+                                {
+                                    "value": "KWD",
+                                    "displayValue": "KWD"
+                                },
+                                {
+                                    "value": "LTL",
+                                    "displayValue": "LTL"
+                                },
+                                {
+                                    "value": "LVL",
+                                    "displayValue": "LVL"
+                                },
+                                {
+                                    "value": "MAD",
+                                    "displayValue": "MAD"
+                                },
+                                {
+                                    "value": "MRO",
+                                    "displayValue": "MRO"
+                                },
+                                {
+                                    "value": "MTL",
+                                    "displayValue": "MTL"
+                                },
+                                {
+                                    "value": "MUR",
+                                    "displayValue": "MUR"
+                                },
+                                {
+                                    "value": "MXN",
+                                    "displayValue": "MXN"
+                                },
+                                {
+                                    "value": "MYR",
+                                    "displayValue": "MYR"
+                                },
+                                {
+                                    "value": "NLG",
+                                    "displayValue": "NLG"
+                                },
+                                {
+                                    "value": "NOK",
+                                    "displayValue": "NOK"
+                                },
+                                {
+                                    "value": "NZD",
+                                    "displayValue": "NZD"
+                                },
+                                {
+                                    "value": "OMR",
+                                    "displayValue": "OMR"
+                                },
+                                {
+                                    "value": "PHP",
+                                    "displayValue": "PHP"
+                                },
+                                {
+                                    "value": "PKR",
+                                    "displayValue": "PKR"
+                                },
+                                {
+                                    "value": "PLN",
+                                    "displayValue": "PLN"
+                                },
+                                {
+                                    "value": "QAR",
+                                    "displayValue": "QAR"
+                                },
+                                {
+                                    "value": "RUB",
+                                    "displayValue": "RUB"
+                                },
+                                {
+                                    "value": "SAR",
+                                    "displayValue": "SAR"
+                                },
+                                {
+                                    "value": "SCR",
+                                    "displayValue": "SCR"
+                                },
+                                {
+                                    "value": "SGD",
+                                    "displayValue": "SGD"
+                                },
+                                {
+                                    "value": "SIT",
+                                    "displayValue": "SIT"
+                                },
+                                {
+                                    "value": "SKK",
+                                    "displayValue": "SKK"
+                                },
+                                {
+                                    "value": "SYP",
+                                    "displayValue": "SYP"
+                                },
+                                {
+                                    "value": "THB",
+                                    "displayValue": "THB"
+                                },
+                                {
+                                    "value": "TND",
+                                    "displayValue": "TND"
+                                },
+                                {
+                                    "value": "TRL",
+                                    "displayValue": "TRL"
+                                },
+                                {
+                                    "value": "TRY",
+                                    "displayValue": "TRY"
+                                },
+                                {
+                                    "value": "TTD",
+                                    "displayValue": "TTD"
+                                },
+                                {
+                                    "value": "TWD",
+                                    "displayValue": "TWD"
+                                },
+                                {
+                                    "value": "UAH",
+                                    "displayValue": "UAH"
+                                },
+                                {
+                                    "value": "VND",
+                                    "displayValue": "VND"
+                                },
+                                {
+                                    "value": "XAF",
+                                    "displayValue": "XAF"
+                                },
+                                {
+                                    "value": "XOF",
+                                    "displayValue": "XOF"
+                                },
+                                {
+                                    "value": "ZAR",
+                                    "displayValue": "ZAR"
+                                },
+                                {
+                                    "value": "ZAT",
+                                    "displayValue": "ZAT"
+                                }
+                            ],
+                            "name": "customerCrossDefaultCurrency",
+                            "label": "Currency",
+                            "type": "Dropdown",
+                            "validators": [
+                                {
+                                    "type": "Required"
+                                }
+                            ]
+                        }
+                    ],
+                    "horizontal": true,
+                    "name": "customerCrossDefaultThresholdModule",
+                    "label": "Customer Threshold",
+                    "type": "Container",
+                    "validators": []
+                }
+            ],
+            "horizontal": false,
+            "name": "customerCrossDefaultModule",
+            "label": "Customer Cross Default",
+            "type": "Container",
+            "validators": []
+        },
+        {
+            "optional": false,
+            "controls": [
+                {
+                    "classifier": [
+                        {
+                            "value": "Yes",
+                            "displayValue": "YES"
+                        },
+                        {
+                            "value": "No",
+                            "displayValue": "NO"
+                        }
+                    ],
+                    "name": "forceMajeureAmendment",
+                    "label": "Force majeure amendment",
+                    "type": "Dropdown",
+                    "validators": [
+                        {
+                            "type": "Required"
+                        }
+                    ]
+                }
+            ],
+            "horizontal": false,
+            "name": "otherProvisionsModule",
+            "label": "Other Provisions",
+            "type": "Container",
+            "validators": []
+        },
+        {
+            "optional": true,
+            "controls": [
+                {
+                    "classifier": [
+                        {
+                            "value": "Fitch",
+                            "displayValue": "Fitch"
+                        },
+                        {
+                            "value": "Moodys",
+                            "displayValue": "Moodys"
+                        },
+                        {
+                            "value": "S&P",
+                            "displayValue": "S&P"
+                        }
+                    ],
+                    "name": "ratingTriggerInstitute",
+                    "label": "Institute",
+                    "type": "Dropdown",
+                    "validators": [
+                        {
+                            "type": "Required"
+                        }
+                    ]
+                },
+                {
+                    "name": "ratingTriggerRating",
+                    "label": "Rating",
+                    "type": "Textbox",
+                    "validators": [
+                        {
+                            "type": "Required"
+                        }
+                    ]
+                }
+            ],
+            "horizontal": false,
+            "name": "ratingTriggerModule",
+            "label": "Rating Trigger",
+            "type": "Container",
+            "validators": []
+        },
+        {
+            "optional": true,
+            "controls": [
+                {
+                    "optional": false,
+                    "controls": [
+                        {
+                            "classifier": [
+                                {
+                                    "value": "Protocol",
+                                    "displayValue": "Protocol"
+                                },
+                                {
+                                    "value": "Schedule",
+                                    "displayValue": "Schedule"
+                                },
+                                {
+                                    "value": "Addendum",
+                                    "displayValue": "Addendum"
+                                }
+                            ],
+                            "name": "sourceOfReconciliation",
+                            "label": "Source of Reconciliation",
+                            "type": "Dropdown",
+                            "validators": [
+                                {
+                                    "type": "Required"
+                                }
+                            ]
+                        },
+                        {
+                            "classifier": [
+                                {
+                                    "value": "Sender",
+                                    "displayValue": "Sender"
+                                },
+                                {
+                                    "value": "Receiver",
+                                    "displayValue": "Receiver"
+                                }
+                            ],
+                            "name": "customerProtocolTerms",
+                            "label": "Customer Protocol Terms",
+                            "type": "Dropdown",
+                            "validators": [
+                                {
+                                    "type": "Required"
+                                }
+                            ]
+                        }
+                    ],
+                    "horizontal": false,
+                    "name": "portfolioReconciliationModule",
+                    "label": "Portfolio Reconciliation",
+                    "type": "Container",
+                    "validators": []
+                },
+                {
+                    "repeat": true,
+                    "optional": true,
+                    "controls": [
+                        {
+                            "name": "portfolioData",
+                            "label": "Portfolio data",
+                            "type": "Textbox",
+                            "validators": [
+                                {
+                                    "type": "Required"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "noticeOfDiscrepancy",
+                            "label": "Notice of discrepancy",
+                            "type": "Textbox",
+                            "validators": [
+                                {
+                                    "type": "Required"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "disputeNotice",
+                            "label": "Dispute notice",
+                            "type": "Textbox",
+                            "validators": [
+                                {
+                                    "type": "Required"
+                                }
+                            ]
+                        }
+                    ],
+                    "horizontal": true,
+                    "name": "portfolioEmailModule",
+                    "label": "Portfolio Email",
+                    "type": "RepeatingContainer",
+                    "validators": [
+                        {
+                            "number": 7,
+                            "type": "MaxRows"
+                        }
+                    ]
+                }
+            ],
+            "horizontal": false,
+            "name": "portfolioModule",
+            "label": "Portfolio",
+            "type": "Container",
+            "validators": []
+        }
+    ]
+}

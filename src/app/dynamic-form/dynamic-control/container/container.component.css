@@ -1,0 +1,18 @@
+.main-props-row {
+  margin-bottom: 5px;
+}
+
+.document-main-form-descr {
+  font-weight: bold;
+  min-width: 150px;
+  max-width: 300px;
+}
+
+.document-main-form-field {
+  width: 300px;
+  text-align: left;
+}
+
+.horizontal-item {
+  min-width: 150px;
+}

@@ -1,0 +1,16 @@
+<p-fieldset #containerFieldset [legend]="containerVal.label" [toggleable]="containerVal.optional" [collapsed]="containerVal.optional"
+  (onAfterToggle)="onToggle($event)">
+  <ng-container *ngFor="let item of ngArray?.controls; let i = index">
+    <div class="ui-grid-row ui-fluid">
+      <div class="ui-g-10">
+        <df-container [displayFieldset]="false" [container]="containerVal" [(ngGroup)]="ngArray?.controls[i]"></df-container>
+      </div>
+      <div class="ui-g-1">
+        <button pButton *ngIf="ngArray?.controls.length > 1" type="button" (click)="remove(i, $event)" class="form-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-button-danger"
+          icon="fa-close"></button>
+        <button pButton *ngIf="ngArray?.controls.length - 1 === i" type="button" (click)="add($event)" class="form-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-button-success"
+          icon="fa-plus"></button>
+      </div>
+    </div>
+  </ng-container>
+</p-fieldset>
