@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-var dirToServe = '../dist';
+var dirToServe = __dirname + '/../dist';
 var port = process.env.PORT || 8080;
 
 // Run the app by serving the static files
