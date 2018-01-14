@@ -1,0 +1,12 @@
+{
+    "name": "dform-dynaforms-ng-demo",
+    "description": "DynaformsNG dynamic forms demo app",
+    "repository": "https://github.com/teraxas/dform-dynaform-ng",
+    "keywords": [
+        "angular",
+        "dynamic",
+        "forms",
+        "dynamic-forms",
+        "dynaform"
+    ]
+}
