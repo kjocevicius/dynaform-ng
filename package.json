@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node scripts/server.js",
+    "start:dev": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -60,5 +61,9 @@
     "ts-node": "~3.2.0",
     "tslint": "^5.3.2",
     "typescript": "~2.4.2"
+  },
+  "engines": {
+    "node": "9.2.0",
+    "npm": "5.5.1"
   }
 }
