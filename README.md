@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/teraxas/dform-dynaform-ng.svg?branch=master)](https://travis-ci.org/teraxas/dform-dynaform-ng)
+
 # dynaform-ng dynamic forms engine
 
 Dynamic forms component based on model in [dynaform-compiler lib](https://bitbucket.org/teraxas/dynaform-ng-compiler).
