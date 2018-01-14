@@ -5,7 +5,7 @@
 Dynamic forms component based on model in [dynaform-compiler lib](https://bitbucket.org/teraxas/dynaform-ng-compiler).
 Built using PrimeNG components.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
+[DEMO Page](https://dforms-ng-demo.herokuapp.com/)
 
 [![Deploy DEMO](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
