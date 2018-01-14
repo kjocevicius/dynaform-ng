@@ -17,8 +17,10 @@ export class DynamicFormComponent implements OnInit {
 
   @Output() formGroupChange = new EventEmitter();
 
-  constructor(private dynamicControlService: DynamicControlService,
-    private changeDetector: ChangeDetectorRef) { }
+  constructor(
+    private dynamicControlService: DynamicControlService,
+    private changeDetector: ChangeDetectorRef
+  ) { }
 
   ngOnInit() {
   }

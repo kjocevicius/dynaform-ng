@@ -12,8 +12,8 @@ export const DYNAMIC_CONTROL_VALUE_ACCESSOR: any = {
   multi: true
 };
 
+// TODO : change to load components dynamically
 @Component({
-  // tslint:disable-next-line:component-selector
   selector: 'df-dynamic-control',
   templateUrl: './dynamic-control.component.html',
   styleUrls: ['./dynamic-control.component.css'],

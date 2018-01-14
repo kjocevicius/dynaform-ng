@@ -433,11 +433,7 @@
                     "name": "customerBranch",
                     "label": "Branch",
                     "type": "Textbox",
-                    "validators": [
-                        {
-                            "type": "Required"
-                        }
-                    ]
+                    "validators": []
                 }
             ],
             "horizontal": true,
@@ -463,11 +459,7 @@
                     "name": "someCreditUponMerger",
                     "label": "some - Credit upon merger",
                     "type": "Dropdown",
-                    "validators": [
-                        {
-                            "type": "Required"
-                        }
-                    ]
+                    "validators": []
                 },
                 {
                     "classifier": [
@@ -483,11 +475,7 @@
                     "name": "customerCreditUponMerger",
                     "label": "Customer - Credit upon merger",
                     "type": "Dropdown",
-                    "validators": [
-                        {
-                            "type": "Required"
-                        }
-                    ]
+                    "validators": []
                 }
             ],
             "horizontal": false,
@@ -552,11 +540,7 @@
                             "name": "someCrossDefaultNav",
                             "label": "Nav",
                             "type": "Dropdown",
-                            "validators": [
-                                {
-                                    "type": "Required"
-                                }
-                            ]
+                            "validators": []
                         },
                         {
                             "classifier": [
@@ -608,20 +592,13 @@
                             "name": "someCrossDefaultShareholder",
                             "label": "Shareholder",
                             "type": "Dropdown",
-                            "validators": [
-                                {
-                                    "type": "Required"
-                                }
-                            ]
+                            "validators": []
                         },
                         {
                             "name": "someCrossDefaultAmount",
                             "label": "Amount",
                             "type": "TextboxCurrency",
                             "validators": [
-                                {
-                                    "type": "Required"
-                                }
                             ]
                         },
                         {
@@ -951,9 +928,6 @@
                             "label": "Currency",
                             "type": "Dropdown",
                             "validators": [
-                                {
-                                    "type": "Required"
-                                }
                             ]
                         }
                     ],
@@ -1027,9 +1001,6 @@
                             "label": "Nav",
                             "type": "Dropdown",
                             "validators": [
-                                {
-                                    "type": "Required"
-                                }
                             ]
                         },
                         {
@@ -1083,9 +1054,6 @@
                             "label": "Shareholder",
                             "type": "Dropdown",
                             "validators": [
-                                {
-                                    "type": "Required"
-                                }
                             ]
                         },
                         {
@@ -1093,9 +1061,6 @@
                             "label": "Amount",
                             "type": "TextboxCurrency",
                             "validators": [
-                                {
-                                    "type": "Required"
-                                }
                             ]
                         },
                         {
@@ -1425,9 +1390,6 @@
                             "label": "Currency",
                             "type": "Dropdown",
                             "validators": [
-                                {
-                                    "type": "Required"
-                                }
                             ]
                         }
                     ],
@@ -1462,9 +1424,6 @@
                     "label": "Force majeure amendment",
                     "type": "Dropdown",
                     "validators": [
-                        {
-                            "type": "Required"
-                        }
                     ]
                 }
             ],
@@ -1496,9 +1455,6 @@
                     "label": "Institute",
                     "type": "Dropdown",
                     "validators": [
-                        {
-                            "type": "Required"
-                        }
                     ]
                 },
                 {
@@ -1506,9 +1462,6 @@
                     "label": "Rating",
                     "type": "Textbox",
                     "validators": [
-                        {
-                            "type": "Required"
-                        }
                     ]
                 }
             ],
@@ -1543,9 +1496,6 @@
                             "label": "Source of Reconciliation",
                             "type": "Dropdown",
                             "validators": [
-                                {
-                                    "type": "Required"
-                                }
                             ]
                         },
                         {
@@ -1563,9 +1513,6 @@
                             "label": "Customer Protocol Terms",
                             "type": "Dropdown",
                             "validators": [
-                                {
-                                    "type": "Required"
-                                }
                             ]
                         }
                     ],
@@ -1584,9 +1531,6 @@
                             "label": "Portfolio data",
                             "type": "Textbox",
                             "validators": [
-                                {
-                                    "type": "Required"
-                                }
                             ]
                         },
                         {
@@ -1594,9 +1538,6 @@
                             "label": "Notice of discrepancy",
                             "type": "Textbox",
                             "validators": [
-                                {
-                                    "type": "Required"
-                                }
                             ]
                         },
                         {
@@ -1604,9 +1545,6 @@
                             "label": "Dispute notice",
                             "type": "Textbox",
                             "validators": [
-                                {
-                                    "type": "Required"
-                                }
                             ]
                         }
                     ],
