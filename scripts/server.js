@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const fs = require('fs');
 
 var dirToServe = path.join(__dirname, '..', 'dist');
 var port = process.env.PORT || 8080;
@@ -14,3 +15,9 @@ app.use('/', express.static(dirToServe));
 app.listen(port);
 
 console.log(`Serving ${dirToServe} on port ${port}`);
+
+fs.readdir(dirToServe, (err, files) => {
+  files.forEach(file => {
+    console.log(file);
+  });
+})
