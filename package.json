@@ -1,6 +1,6 @@
 {
   "name": "dynaform-ng",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Karolis Jocevičius",
   "description": "Angular and primeng based dynamic forms component",
   "keywords": [
@@ -20,8 +20,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build --prod",
-    "package": "ng-packagr -p ng-package.json",
-    "publish": "npm run package && npm publish dist/lib/"
+    "prepare": "ng-packagr -p ng-package.json",
+    "publish": "npm publish dist/lib/"
   },
   "repository": {
     "type": "git",

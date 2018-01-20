@@ -4,7 +4,8 @@
   "lib": {
     "entryFile": "public_api.ts",
     "externals": {
-      "primeng/primeng": "primeng/primeng"
+      "primeng/primeng": "primeng/primeng",
+      "dform-model": "dform-model"
     }
   }
 }
