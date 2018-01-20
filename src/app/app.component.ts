@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { DForm } from './dynamic-form/model/dynamic-form.model';
+import { DForm } from 'dform-model';
 import { DynamicControlService } from './dynamic-form/service/dynamic-control.service';
 import { FormGroup } from '@angular/forms';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FormArray } from '@angular/forms';
-import { DFormContainer } from '../../model/dynamic-form.model';
-import { DynamicControlService } from "../../service/dynamic-control.service";
+import { DFormContainer } from 'dform-model';
+import { DynamicControlService } from '../../service/dynamic-control.service';
 
 @Component({
   // tslint:disable-next-line:component-selector

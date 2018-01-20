@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
-import { DForm, DFormControl, DFormField } from '../model/dynamic-form.model';
+import {
+  DForm, DFormControl, DFormField,
+  VALIDATOR_TYPE, DValidator, DValidatorRegex, DValidatorNumber,
+  CONTROL_VAL_TYPE, Option, CONTAINER_TYPE, CONTAINER_TYPES, DFormContainer
+} from 'dform-model';
 import { FormGroup, FormControl, Validators, FormArray, AbstractControl, ValidationErrors } from '@angular/forms';
-import { VALIDATOR_TYPE, DValidator, DValidatorRegex, DValidatorNumber } from '../model/validator.model';
-import { CONTROL_VAL_TYPE, Option, CONTAINER_TYPE, CONTAINER_TYPES, DFormContainer } from '../model/dynamic-form.model';
 import { SelectItem } from 'primeng/primeng';
 
 @Injectable()
