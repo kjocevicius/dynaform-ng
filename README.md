@@ -7,6 +7,8 @@ Built using PrimeNG components.
 
 [DEMO Page](https://dforms-ng-demo.herokuapp.com/)
 
+[![NPM](https://nodei.co/npm/dynaform-ng.png)](https://nodei.co/npm/dynaform-ng/)
+
 [![Deploy DEMO](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Install
