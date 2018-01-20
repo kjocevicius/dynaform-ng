@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
-import { DFormControl, DFormContainer, CONTAINER_TYPE } from '../../model/dynamic-form.model';
+import { DFormControl, DFormContainer, CONTAINER_TYPE } from 'dform-model';
 import { FormGroup, AbstractControl } from '@angular/forms';
 import { DynamicControlService } from '../../service/dynamic-control.service';
 
@@ -56,10 +56,16 @@ export class ContainerComponent implements OnInit {
   set controls(controls: DFormControl[]) {
     console.log('Got controls: ', controls);
     this.controlsArray = controls;
-    this.containerVal = new DFormContainer();
-    this.containerVal.controls = controls;
-    this.containerVal.horizontal = false;
-    this.containerVal.optional = false;
+    this.containerVal = {
+      name: null,
+      label: null,
+      type: null,
+      validators: null,
+      controls: controls,
+      horizontal: false,
+      optional: false,
+      repeat: false
+    };
   }
 
   @Input()

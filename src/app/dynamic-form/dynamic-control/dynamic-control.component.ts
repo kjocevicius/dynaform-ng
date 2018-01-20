@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output, forwardRef } from '@angular/core';
-import { DFormControl, DFormField, DFormFieldOptions, DFormFieldMultiselect } from '../model/dynamic-form.model';
+import { DFormControl, DFormField, DFormFieldOptions, DFormFieldMultiselect } from 'dform-model';
 import { SelectItem } from 'primeng/primeng';
 import { FormControl, ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
