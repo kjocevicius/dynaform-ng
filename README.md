@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/teraxas/dform-dynaform-ng.svg?branch=master)](https://travis-ci.org/teraxas/dform-dynaform-ng)
+[![Build Status](https://travis-ci.org/teraxas/dynaform-ng.svg?branch=master)](https://travis-ci.org/teraxas/dynaform-ng)
 
 # dynaform-ng dynamic forms engine
 
