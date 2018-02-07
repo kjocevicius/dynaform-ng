@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/teraxas/dform-dynaform-ng.svg?branch=master)](https://travis-ci.org/teraxas/dform-dynaform-ng)
+[![Build Status](https://travis-ci.org/teraxas/dynaform-ng.svg?branch=master)](https://travis-ci.org/teraxas/dynaform-ng)
 
 # dynaform-ng dynamic forms engine
 
@@ -6,6 +6,8 @@ Dynamic forms component based on model in [dynaform-compiler lib](https://bitbuc
 Built using PrimeNG components.
 
 [DEMO Page](https://dforms-ng-demo.herokuapp.com/)
+
+[![NPM](https://nodei.co/npm/dynaform-ng.png)](https://nodei.co/npm/dynaform-ng/)
 
 [![Deploy DEMO](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
