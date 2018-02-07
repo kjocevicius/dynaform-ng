@@ -1,99 +1,65 @@
+<ng-container *ngIf="ngGroup" [formGroup]="ngGroup">
 
-<!-- TODO : YES, it's bad, BUT I will refactor contents to use ng-template, to avoid duplication -->
-
-<div *ngIf="ngGroup" [formGroup]="ngGroup">
-  <div *ngIf="displayFieldset else noFieldset">
+  <ng-container *ngIf="displayFieldset else noFieldset">
     <p-fieldset #containerFieldset [legend]="containerVal.label" [toggleable]="containerVal.optional" [collapsed]="containerVal.optional"
       (onAfterToggle)="onToggle($event)">
-
-      <div *ngIf="!containerVal.horizontal else horizontalSet">
-        <div *ngFor="let ctrl of controlsArray">
-          <div class="ui-grid-row ui-fluid main-props-row">
-
-            <div #labelDiv class="ui-g-6 document-main-form-descr" *ngIf="isShowLabel(ctrl)">
-              {{ctrl.label}}
-            </div>
-            <div [class]="isShowLabel(ctrl) ? 'ui-g-6' : 'ui-g-12'">
-              <!-- TODO : refactor contents to a ng-template, to avoid duplication -->
-              <df-dynamic-control *ngIf="!isContainer(ctrl) else dynamicContainer0" [control]="ctrl" [formControlName]="ctrl?.name"> </df-dynamic-control>
-              <ng-template #dynamicContainer0>
-                <df-container *ngIf="!isRepeating(ctrl) else repeating0" [container]="ctrl" [(ngGroup)]="ngGroup.controls[ctrl.name]"></df-container>
-                <ng-template #repeating0>
-                  <df-container-repeat [container]="ctrl" [(ngArray)]="ngGroup.controls[ctrl.name]"></df-container-repeat>
-                </ng-template>
-              </ng-template>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <ng-template #horizontalSet>
-        <div class="ui-grid-row ui-fluid">
-          <div *ngFor="let ctrl of controlsArray">
-            <div class="ui-g-2 horizontal-item">
-
-              <div #labelDiv class="document-main-form-descr" *ngIf="isShowLabel(ctrl)">
-                {{ctrl.label}}
-              </div>
-              <div>
-                <df-dynamic-control *ngIf="!isContainer(ctrl) else dynamicContainer1" [control]="ctrl" [formControlName]="ctrl?.name"> </df-dynamic-control>
-                <ng-template #dynamicContainer1>
-                  <df-container [container]="ctrl" [(ngGroup)]="ngGroup.controls[ctrl.name]"></df-container>
-                </ng-template>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </ng-template>
+      <ng-container *ngTemplateOutlet="formControlSet"></ng-container>
 
     </p-fieldset>
-  </div>
+  </ng-container>
 
   <!-- root element without surrounding fieldset -->
-  <div #noFieldset *ngIf="!displayFieldset">
+  <ng-container #noFieldset *ngIf="!displayFieldset">
+    <ng-container *ngTemplateOutlet="formControlSet"></ng-container>
+  </ng-container>
 
-    <div *ngIf="!containerVal.horizontal else horizontalSet">
-      <div *ngFor="let ctrl of controlsArray">
-        <div class="ui-g-r ui-fluid main-props-row">
+  <ng-template #formControlSet>
+    <ng-container *ngIf="!containerVal.horizontal else horizontalSet">
+      <ng-container *ngFor="let ctrl of controlsArray">
+        <div class="ui-grid-row ui-fluid main-props-row">
 
-          <div class="ui-g-6 document-main-form-descr" *ngIf="isShowLabel(ctrl)">
+          <div #labelDiv class="ui-g-6 document-main-form-descr" *ngIf="isShowLabel(ctrl)">
             {{ctrl.label}}
           </div>
           <div [class]="isShowLabel(ctrl) ? 'ui-g-6' : 'ui-g-12'">
-            <df-dynamic-control *ngIf="!isContainer(ctrl) else dynamicContainer2" [control]="ctrl" [formControlName]="ctrl?.name"> </df-dynamic-control>
-            <ng-template #dynamicContainer2>
-              <df-container *ngIf="!isRepeating(ctrl) else repeating2" [container]="ctrl" [(ngGroup)]="ngGroup.controls[ctrl.name]"></df-container>
-              <ng-template #repeating2>
-                <df-container-repeat [container]="ctrl" [(ngArray)]="ngGroup.controls[ctrl.name]"></df-container-repeat>
-              </ng-template>
-            </ng-template>
+            <ng-container *ngTemplateOutlet="controlOrContainer;context: {ctrl: ctrl}"></ng-container>
+          </div>
+
+        </div>
+      </ng-container>
+    </ng-container>
+  </ng-template>
+
+  <ng-template #horizontalSet>
+    <div class="ui-grid-row ui-fluid">
+      <ng-container *ngFor="let ctrl of controlsArray">
+        <div class="ui-g-2 horizontal-item">
+          <div #labelDiv class="document-main-form-descr" *ngIf="isShowLabel(ctrl)">
+            {{ctrl.label}}
+          </div>
+          <div>
+            <ng-container *ngTemplateOutlet="controlOrContainerHorizontal;context: {ctrl: ctrl}"></ng-container>
           </div>
         </div>
-      </div>
+      </ng-container>
     </div>
+  </ng-template>
 
-    <ng-template #horizontalSet>
-      <div class="ui-grid-row ui-fluid">
-        <div *ngFor="let ctrl of controlsArray">
-          <div class="ui-g-2 horizontal-item">
-
-            <div #labelDiv class="document-main-form-descr" *ngIf="isShowLabel(ctrl)">
-              {{ctrl.label}}
-            </div>
-            <div>
-              <df-dynamic-control *ngIf="!isContainer(ctrl) else dynamicContainer1" [control]="ctrl" [formControlName]="ctrl?.name"> </df-dynamic-control>
-              <ng-template #dynamicContainer1>
-                <df-container [container]="ctrl" [(ngGroup)]="ngGroup.controls[ctrl.name]"></df-container>
-              </ng-template>
-            </div>
-
-          </div>
-        </div>
-      </div>
+  <ng-template #controlOrContainer let-ctrl="ctrl">
+    <df-dynamic-control *ngIf="!isContainer(ctrl); else dynamicContainer" [control]="ctrl" [formControlName]="ctrl?.name"> </df-dynamic-control>
+    <ng-template #dynamicContainer>
+      <df-container *ngIf="!isRepeating(ctrl); else repeating" [container]="ctrl" [(ngGroup)]="ngGroup.controls[ctrl.name]"></df-container>
+      <ng-template #repeating>
+        <df-container-repeat [container]="ctrl" [(ngArray)]="ngGroup.controls[ctrl.name]"></df-container-repeat>
+      </ng-template>
     </ng-template>
+  </ng-template>
 
-  </div>
+  <ng-template #controlOrContainerHorizontal let-ctrl="ctrl">
+    <df-dynamic-control *ngIf="!isContainer(ctrl); else dynamicContainer" [control]="ctrl" [formControlName]="ctrl?.name"> </df-dynamic-control>
+    <ng-template #dynamicContainer>
+      <df-container [container]="ctrl" [(ngGroup)]="ngGroup.controls[ctrl.name]"></df-container>
+    </ng-template>
+  </ng-template>
 
-</div>
+</ng-container>
