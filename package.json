@@ -1,6 +1,6 @@
 {
   "name": "dynaform-ng",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "Karolis Jocevičius",
   "description": "Angular and primeng based dynamic forms component",
   "keywords": [
