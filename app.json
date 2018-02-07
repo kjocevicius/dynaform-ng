@@ -1,12 +1,15 @@
 {
-    "name": "dform-dynaforms-ng-demo",
-    "description": "DynaformsNG dynamic forms demo app",
-    "repository": "https://github.com/teraxas/dform-dynaform-ng",
+    "name": "dynaform-ng-demo",
+    "description": "Dynaform-ng dynamic forms demo app",
+    "repository": "https://github.com/teraxas/dynaform-ng",
     "keywords": [
         "angular",
         "dynamic",
         "forms",
         "dynamic-forms",
         "dynaform"
-    ]
+    ],
+    "env": {
+        "NODE_ENV": "development"
+    }
 }
