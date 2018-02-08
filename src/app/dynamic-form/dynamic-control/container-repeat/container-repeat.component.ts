@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FormArray } from '@angular/forms';
-import { DFormContainer } from 'dform-model';
 import { DynamicControlService } from '../../service/dynamic-control.service';
+import { DFormContainer } from 'dynaform-model';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -23,28 +23,26 @@ export class ContainerRepeatComponent implements OnInit {
   }
 
   add() {
-    console.log('Add item for array: ', this.containerVal.name);
     const item = this.controlService.buildFormGroup(this.containerVal);
     this.ngArray.push(item);
   }
 
   remove(index: number) {
-    console.log('Remove item for array: ', this.containerVal.name);
     this.ngArray.removeAt(index);
   }
 
-  onToggle(event: {originalEvent: any, collapsed: boolean}) {
-    console.log('Fieldset toggled: ' + this.containerVal.name, event);
-    if (event.collapsed) {
-      this.ngArray.controls = [];
-    } else if (this.ngArray.controls.length === 0) {
+  onOpen() {
+    if (this.ngArray.controls.length === 0) {
       this.add();
     }
   }
 
+  onClose() {
+    this.ngArray.controls = [];
+  }
+
   @Input()
   set container(container: DFormContainer) {
-    console.log('Got container: ', container);
     this.containerVal = container;
   }
 

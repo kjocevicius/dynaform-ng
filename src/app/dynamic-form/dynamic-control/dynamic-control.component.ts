@@ -1,6 +1,5 @@
+import { DFormControl, DFormField, DFormFieldOptions, DFormFieldMultiselect, Option } from 'dynaform-model';
 import { Component, OnInit, Input, EventEmitter, Output, forwardRef } from '@angular/core';
-import { DFormControl, DFormField, DFormFieldOptions, DFormFieldMultiselect } from 'dform-model';
-import { SelectItem } from 'primeng/primeng';
 import { FormControl, ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 const noop = () => {
@@ -21,8 +20,6 @@ export const DYNAMIC_CONTROL_VALUE_ACCESSOR: any = {
 })
 export class DynamicControlComponent implements OnInit, ControlValueAccessor {
   controlObject: DFormControl;
-  options: SelectItem[];
-  excluded: SelectItem[];
 
   @Output() controlChange = new EventEmitter();
 
@@ -39,31 +36,16 @@ export class DynamicControlComponent implements OnInit, ControlValueAccessor {
   ngOnInit() {
   }
 
-  getOptions(): SelectItem[] {
-    return this.fieldOptions.classifier.map(val => {
-      return {
-        value: val.value,
-        label: val.displayValue
-      };
-    });
+  get options(): Option[] {
+    return this.fieldOptions.classifier;
   }
 
-  getSelected(): SelectItem[] {
-    return this.fieldMultiselect.value.map(val => {
-      return {
-        value: val.value,
-        label: val.displayValue
-      };
-    });
+  get selected(): Option[] {
+    return this.fieldMultiselect.value;
   }
 
-  getExcluded(): SelectItem[] {
-    return this.fieldMultiselect.excluded.map(val => {
-      return {
-        value: val.value,
-        label: val.displayValue
-      };
-    });
+  get excluded(): Option[] {
+    return this.fieldMultiselect.excluded;
   }
 
   @Input()
@@ -71,14 +53,6 @@ export class DynamicControlComponent implements OnInit, ControlValueAccessor {
     console.log('Got control: ', control);
     this.controlObject = control;
     this.controlChange.emit(this.controlObject);
-
-    if (this.controlObject !== control) {
-      return;
-    } else if (Object.keys(this.controlObject).indexOf('classifier') > -1) {
-      this.options = this.getOptions();
-    } else if (Object.keys(this.controlObject).indexOf('excluded') > -1) {
-      this.excluded = this.getExcluded();
-    }
   }
 
   get control(): DFormControl {

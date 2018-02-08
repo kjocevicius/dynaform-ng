@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
-import { DFormControl, DFormContainer, CONTAINER_TYPE } from 'dform-model';
 import { FormGroup, AbstractControl } from '@angular/forms';
+import { DFormControl, DFormContainer, CONTAINER_TYPE } from 'dynaform-model';
 import { DynamicControlService } from '../../service/dynamic-control.service';
 
 @Component({
@@ -24,14 +24,13 @@ export class ContainerComponent implements OnInit {
   ngOnInit() {
   }
 
-  onToggle(event: {originalEvent: any, collapsed: boolean}) {
-    console.log('Fieldset toggled: ' + this.containerVal.name, event);
-    if (event.collapsed) {
-      this.controlService.clearValidatorsOfGroup(this.ngGroupObject);
-      this.ngGroupObject.reset();
-    } else {
-      this.controlService.applyValidators(this.containerVal, this.ngGroupObject, true);
-    }
+  onOpen() {
+    this.controlService.applyValidators(this.containerVal, this.ngGroupObject, true);
+  }
+
+  onClose() {
+    this.controlService.clearValidatorsOfGroup(this.ngGroupObject);
+    this.ngGroupObject.reset();
   }
 
   isShowLabel(controlObject: DFormControl): boolean {
@@ -54,7 +53,6 @@ export class ContainerComponent implements OnInit {
 
   @Input()
   set controls(controls: DFormControl[]) {
-    console.log('Got controls: ', controls);
     this.controlsArray = controls;
     this.containerVal = {
       name: null,
@@ -70,7 +68,6 @@ export class ContainerComponent implements OnInit {
 
   @Input()
   set container(container: DFormContainer) {
-    console.log('Got container: ', container);
     this.containerVal = container;
     this.controlsArray = container ? container.controls : [];
   }

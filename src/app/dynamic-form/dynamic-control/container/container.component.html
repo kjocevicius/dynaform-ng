@@ -1,11 +1,10 @@
 <ng-container *ngIf="ngGroup" [formGroup]="ngGroup">
 
   <ng-container *ngIf="displayFieldset else noFieldset">
-    <p-fieldset #containerFieldset [legend]="containerVal.label" [toggleable]="containerVal.optional" [collapsed]="containerVal.optional"
-      (onAfterToggle)="onToggle($event)">
+    <mat-expansion-panel [hideToggle]="!containerVal.optional" [expanded]="containerVal.optional" (opened)="onOpen()" (opened)="onClose()">
+      <mat-expansion-panel-header>{{containerVal.label}}</mat-expansion-panel-header>
       <ng-container *ngTemplateOutlet="formControlSet"></ng-container>
-
-    </p-fieldset>
+    </mat-expansion-panel>
   </ng-container>
 
   <!-- root element without surrounding fieldset -->

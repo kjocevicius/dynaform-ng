@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ChangeDetectorRef, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
-import { DForm, DValidator, DValidatorRegex, DValidatorNumber, VALIDATOR_TYPE } from 'dform-model';
+import { DForm, DValidator, DValidatorRegex, DValidatorNumber, VALIDATOR_TYPE } from 'dynaform-model';
 import { DynamicControlService } from './service/dynamic-control.service';
 
 @Component({

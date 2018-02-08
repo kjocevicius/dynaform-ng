@@ -1,6 +1,6 @@
+import { DForm } from 'dynaform-model';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { DForm } from 'dform-model';
 import { DynamicControlService } from './dynamic-form/service/dynamic-control.service';
 import { FormGroup } from '@angular/forms';
 

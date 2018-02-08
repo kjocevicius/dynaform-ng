@@ -1,35 +1,42 @@
 <div [ngSwitch]="controlObject.type">
 
   <div *ngSwitchCase="'Textbox'">
-    <div class="ui-fluid form-field">
-      <input type="text" pInputText [(ngModel)]="value" />
-    </div>
+    <mat-form-field>
+      <input matInput [placeholder]="controlObject.label" [(ngModel)]="value">
+    </mat-form-field>
   </div>
 
   <div *ngSwitchCase="'TextboxCurrency'">
     <!-- TODO : custom component ???, use custom input mask -->
-    <div class="ui-fluid form-field">
-      <p-inputMask mask="999999,99" [(ngModel)]="value" ></p-inputMask>
-    </div>
+    <mat-form-field>
+      <input matInput [placeholder]="controlObject.label" [(ngModel)]="value">
+    </mat-form-field>
   </div>
 
   <div *ngSwitchCase="'Checkbox'">
-    <div class="ui-fluid form-field">
-      <p-checkbox [(ngModel)]="value"></p-checkbox>
-    </div>
+    <mat-form-field>
+      <mat-checkbox [(ngModel)]="value">
+        {{controlObject.label}}
+      </mat-checkbox>
+    </mat-form-field>
   </div>
 
   <div *ngSwitchCase="'Date'">
-    <div class="ui-fluid form-field">
-      <p-calendar autoWidth="false" [(ngModel)]="value"></p-calendar>
-    </div>
+    <mat-form-field>
+      <input matInput [matDatepicker]="datepicker" [placeholder]="controlObject.label" [(ngModel)]="value">
+      <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+      <mat-datepicker #datepicker></mat-datepicker>
+    </mat-form-field>
   </div>
 
   <div *ngSwitchCase="'Dropdown'">
-    <div class="ui-fluid form-field">
-      <!-- FIXME : had to force style for dropdown -->
-      <p-dropdown autoWidth="false" [style]="{'width':'100%', 'max-width':'300px'}" [options]="options" [(ngModel)]="value" placeholder="None" ></p-dropdown>
-    </div>
+    <mat-form-field>
+      <mat-select [(ngModel)]="value" [placeholder]="controlObject.label">
+        <mat-option *ngFor="let item of options" [value]="item">
+          {{item.displayValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
 
   <div *ngSwitchCase="'Label'" class="form-label">

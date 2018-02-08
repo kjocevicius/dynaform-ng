@@ -1,5 +1,5 @@
-<p-fieldset #containerFieldset [legend]="containerVal.label" [toggleable]="containerVal.optional" [collapsed]="containerVal.optional"
-  (onAfterToggle)="onToggle($event)">
+<mat-expansion-panel [hideToggle]="!containerVal.optional" [expanded]="containerVal.optional" (opened)="onOpen()" (opened)="onClose()">
+  <mat-expansion-panel-header>{{containerVal.label}}</mat-expansion-panel-header>
   <ng-container *ngFor="let item of ngArray?.controls; let i = index">
     <div class="ui-grid-row ui-fluid">
       <div class="ui-g-10">
@@ -13,4 +13,4 @@
       </div>
     </div>
   </ng-container>
-</p-fieldset>
+</mat-expansion-panel>

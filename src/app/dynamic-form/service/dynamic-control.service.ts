@@ -1,25 +1,13 @@
 import { Injectable } from '@angular/core';
+import { FormGroup, FormControl, Validators, FormArray, AbstractControl, ValidationErrors } from '@angular/forms';
 import {
   DForm, DFormControl, DFormField,
   VALIDATOR_TYPE, DValidator, DValidatorRegex, DValidatorNumber,
   CONTROL_VAL_TYPE, Option, CONTAINER_TYPE, CONTAINER_TYPES, DFormContainer
-} from 'dform-model';
-import { FormGroup, FormControl, Validators, FormArray, AbstractControl, ValidationErrors } from '@angular/forms';
-import { SelectItem } from 'primeng/primeng';
+} from 'dynaform-model';
 
 @Injectable()
 export class DynamicControlService {
-
-  public static toSelectItem(option: Option): SelectItem {
-    return {
-      value: option.value,
-      label: option.displayValue
-    };
-  }
-
-  public static toSelectItems(options: Option[]): SelectItem[] {
-    return options.map(option => DynamicControlService.toSelectItem(option));
-  }
 
   constructor() { }
 
@@ -117,10 +105,6 @@ export class DynamicControlService {
       return null;
     } else if (CONTROL_VAL_TYPE.DATE.indexOf(control.type) > -1) {
       return new Date(val);
-    } else if (CONTROL_VAL_TYPE.OPTION.indexOf(control.type) > -1) {
-      return DynamicControlService.toSelectItem(val as Option);
-    } else if (CONTROL_VAL_TYPE.OPTIONS.indexOf(control.type) > -1) {
-      return DynamicControlService.toSelectItems(val as Option[]);
     } else {
       return val;
     }
