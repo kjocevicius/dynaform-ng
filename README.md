@@ -2,6 +2,8 @@
 
 # dynaform-ng dynamic forms engine
 
+[![Join the chat at https://gitter.im/dynaform-ng/Lobby](https://badges.gitter.im/dynaform-ng/Lobby.svg)](https://gitter.im/dynaform-ng/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Dynamic forms component based on model in [dynaform-compiler lib](https://bitbucket.org/teraxas/dynaform-ng-compiler).
 Built using PrimeNG components.
 
