@@ -1,6 +1,7 @@
-import { DFormControl, DFormField, DFormFieldOptions, DFormFieldMultiselect, Option } from 'dynaform-model';
+import { DFormControl, DFormField, DFormFieldOptions, DFormFieldMultiselect, Option, DFormCurrencyField } from 'dynaform-model';
 import { Component, OnInit, Input, EventEmitter, Output, forwardRef } from '@angular/core';
 import { FormControl, ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { CurrencyMaskConfig } from 'ng2-currency-mask/src/currency-mask.config';
 
 const noop = () => {
 };
@@ -81,6 +82,20 @@ export class DynamicControlComponent implements OnInit, ControlValueAccessor {
 
   set fieldMultiselect(val: DFormFieldMultiselect) {
     this.controlObject = val;
+  }
+
+  get currencyOptions(): CurrencyMaskConfig {
+    const control = this.controlObject as DFormCurrencyField;
+    return {
+      align: 'right',
+      allowNegative: true,
+      allowZero: true,
+      precision: control.precision || 2,
+      prefix: control.prefix || '',
+      suffix: control.suffix || '',
+      decimal: control.decimalSepparator || ',',
+      thousands: control.thousandsSepparator || '.'
+    };
   }
 
   // get accessor

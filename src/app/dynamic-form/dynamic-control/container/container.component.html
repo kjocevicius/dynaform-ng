@@ -15,16 +15,7 @@
   <ng-template #formControlSet>
     <ng-container *ngIf="!containerVal.horizontal else horizontalSet">
       <ng-container *ngFor="let ctrl of controlsArray">
-        <div class="ui-grid-row ui-fluid main-props-row">
-
-          <div #labelDiv class="ui-g-6 document-main-form-descr" *ngIf="isShowLabel(ctrl)">
-            {{ctrl.label}}
-          </div>
-          <div [class]="isShowLabel(ctrl) ? 'ui-g-6' : 'ui-g-12'">
-            <ng-container *ngTemplateOutlet="controlOrContainer;context: {ctrl: ctrl}"></ng-container>
-          </div>
-
-        </div>
+        <ng-container *ngTemplateOutlet="controlOrContainer;context: {ctrl: ctrl}"></ng-container>
       </ng-container>
     </ng-container>
   </ng-template>
@@ -32,14 +23,7 @@
   <ng-template #horizontalSet>
     <div class="ui-grid-row ui-fluid">
       <ng-container *ngFor="let ctrl of controlsArray">
-        <div class="ui-g-2 horizontal-item">
-          <div #labelDiv class="document-main-form-descr" *ngIf="isShowLabel(ctrl)">
-            {{ctrl.label}}
-          </div>
-          <div>
-            <ng-container *ngTemplateOutlet="controlOrContainerHorizontal;context: {ctrl: ctrl}"></ng-container>
-          </div>
-        </div>
+        <ng-container *ngTemplateOutlet="controlOrContainerHorizontal;context: {ctrl: ctrl}"></ng-container>
       </ng-container>
     </div>
   </ng-template>

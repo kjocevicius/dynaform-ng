@@ -27,6 +27,9 @@
     "url": "https://github.com/teraxas/dform-dynaform-ng"
   },
   "private": false,
+  "dependencies": {
+    "ng2-currency-mask": "^4.4.1"
+  },
   "devDependencies": {
     "@angular/animations": "^5.0.0",
     "@angular/cdk": "^5.2.0",
@@ -47,7 +50,7 @@
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.0",
     "core-js": "^2.4.1",
-    "dynaform-model": "0.0.2",
+    "dynaform-model": "0.0.5",
     "express": "^4.15.4",
     "font-awesome": "^4.7.0",
     "jasmine-core": "~2.6.2",

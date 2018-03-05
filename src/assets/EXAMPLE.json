@@ -17,6 +17,12 @@
                     ]
                 },
                 {
+                    "name": "agreementSum",
+                    "label": "Agreement Sum",
+                    "type": "TextboxCurrency",
+                    "suffix": "€"
+                },
+                {
                     "classifier": [
                         {
                             "value": "English Law",
@@ -432,15 +438,13 @@
                 {
                     "name": "customerBranch",
                     "label": "Branch",
-                    "type": "Textbox",
-                    "validators": []
+                    "type": "Textbox"
                 }
             ],
             "horizontal": true,
             "name": "customerMultibranchModule",
             "label": "Customer multibranch",
-            "type": "RepeatingContainer",
-            "validators": []
+            "type": "RepeatingContainer"
         },
         {
             "optional": false,

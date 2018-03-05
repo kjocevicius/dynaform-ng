@@ -9,7 +9,7 @@
   <div *ngSwitchCase="'TextboxCurrency'">
     <!-- TODO : custom component ???, use custom input mask -->
     <mat-form-field>
-      <input matInput [placeholder]="controlObject.label" [(ngModel)]="value">
+      <input matInput [placeholder]="controlObject.label" [(ngModel)]="value" currencyMask [options]="currencyOptions">
     </mat-form-field>
   </div>
 

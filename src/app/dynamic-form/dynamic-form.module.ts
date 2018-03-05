@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 import { MaterialModuleModule } from '../material-module/material-module.module';
 
@@ -17,6 +18,7 @@ import { ContainerRepeatComponent } from './dynamic-control/container-repeat/con
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    CurrencyMaskModule,
     MaterialModuleModule
   ],
   exports: [
