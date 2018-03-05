@@ -25,7 +25,6 @@ export class AppComponent implements OnInit {
     this.http.get<DForm>('/assets/EXAMPLE.json')
       .subscribe(f => {
         this.form = f;
-        console.log(f);
       });
   }
 

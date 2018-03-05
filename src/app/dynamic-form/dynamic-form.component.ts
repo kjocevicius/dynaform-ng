@@ -30,11 +30,8 @@ export class DynamicFormComponent implements OnInit {
 
   @Input()
   set form(form: any) {
-    console.log('Got form: ', form);
     this.formObject = form as DForm;
-
     this.formGroup = form ? this.dynamicControlService.buildForm(form) : null;
-    console.log('FORM GROUP: ', this.formGroup);
 
     // This method causes 'isValid()' value change so we need to force it's detection
     this.changeDetector.detectChanges();

@@ -51,7 +51,6 @@ export class DynamicControlComponent implements OnInit, ControlValueAccessor {
 
   @Input()
   set control(control: DFormControl) {
-    console.log('Got control: ', control);
     this.controlObject = control;
     this.controlChange.emit(this.controlObject);
   }
