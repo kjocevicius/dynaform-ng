@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { DynamicFormModule } from './dynamic-form/dynamic-form.module';
+import { MatNativeDateModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { DynamicFormModule } from './dynamic-form/dynamic-form.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    DynamicFormModule
+    DynamicFormModule,
+    MatNativeDateModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

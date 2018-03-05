@@ -1,4 +1,4 @@
-<mat-expansion-panel [hideToggle]="!containerVal.optional" [expanded]="containerVal.optional" (opened)="onOpen()" (opened)="onClose()">
+<mat-expansion-panel [hideToggle]="!containerVal.optional" [expanded]="containerVal.optional" (opened)="onOpen()" (closed)="onClose()">
   <mat-expansion-panel-header>{{containerVal.label}}</mat-expansion-panel-header>
   <ng-container *ngFor="let item of ngArray?.controls; let i = index">
     <div class="ui-grid-row ui-fluid">
@@ -6,10 +6,12 @@
         <df-container [displayFieldset]="false" [container]="containerVal" [(ngGroup)]="ngArray?.controls[i]"></df-container>
       </div>
       <div class="ui-g-1">
-        <button pButton *ngIf="ngArray?.controls.length > 1" type="button" (click)="remove(i, $event)" class="form-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-button-danger"
-          icon="fa-close"></button>
-        <button pButton *ngIf="ngArray?.controls.length - 1 === i" type="button" (click)="add($event)" class="form-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-button-success"
-          icon="fa-plus"></button>
+        <button mat-icon-button color="warn" *ngIf="ngArray?.controls.length > 1" type="button" (click)="remove(i, $event)" >
+          <mat-icon>delete_forever</mat-icon>
+        </button>
+        <button mat-icon-button color="primary" *ngIf="ngArray?.controls.length - 1 === i" type="button" (click)="add($event)" >
+          <mat-icon>add</mat-icon>
+        </button>
       </div>
     </div>
   </ng-container>

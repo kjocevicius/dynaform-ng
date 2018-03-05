@@ -25,13 +25,16 @@ export class ContainerRepeatComponent implements OnInit {
   add() {
     const item = this.controlService.buildFormGroup(this.containerVal);
     this.ngArray.push(item);
+    console.log('added', item);
   }
 
   remove(index: number) {
     this.ngArray.removeAt(index);
+    console.log('removed');
   }
 
   onOpen() {
+    console.log('open');
     if (this.ngArray.controls.length === 0) {
       this.add();
     }
