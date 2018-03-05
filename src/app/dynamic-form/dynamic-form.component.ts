@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ChangeDetectorRef, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
-import { DForm, DValidator, DValidatorRegex, DValidatorNumber, VALIDATOR_TYPE } from 'dform-model';
+import { DForm, DValidator, DValidatorRegex, DValidatorNumber, VALIDATOR_TYPE } from 'dynaform-model';
 import { DynamicControlService } from './service/dynamic-control.service';
 
 @Component({
@@ -30,11 +30,8 @@ export class DynamicFormComponent implements OnInit {
 
   @Input()
   set form(form: any) {
-    console.log('Got form: ', form);
     this.formObject = form as DForm;
-
     this.formGroup = form ? this.dynamicControlService.buildForm(form) : null;
-    console.log('FORM GROUP: ', this.formGroup);
 
     // This method causes 'isValid()' value change so we need to force it's detection
     this.changeDetector.detectChanges();

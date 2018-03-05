@@ -2,15 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 
-import {
-  FieldsetModule,
-  InputTextModule,
-  DropdownModule,
-  CalendarModule,
-  CheckboxModule,
-  InputMaskModule,
-} from 'primeng/primeng';
+import { MaterialModuleModule } from '../material-module/material-module.module';
 
 import { DynamicFormComponent } from './dynamic-form.component';
 import { DynamicControlComponent } from './dynamic-control/dynamic-control.component';
@@ -24,13 +18,8 @@ import { ContainerRepeatComponent } from './dynamic-control/container-repeat/con
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-
-    FieldsetModule,
-    InputTextModule,
-    DropdownModule,
-    CalendarModule,
-    CheckboxModule,
-    InputMaskModule,
+    CurrencyMaskModule,
+    MaterialModuleModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -38,13 +27,6 @@ import { ContainerRepeatComponent } from './dynamic-control/container-repeat/con
     ReactiveFormsModule,
 
     DynamicFormComponent,
-
-    // FieldsetModule,
-    // InputTextModule,
-    // DropdownModule,
-    // CalendarModule,
-    // CheckboxModule,
-    // InputMaskModule,
   ],
   declarations: [
     DynamicFormComponent,
