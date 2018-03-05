@@ -4,8 +4,8 @@
   "lib": {
     "entryFile": "public_api.ts",
     "externals": {
-      "primeng/primeng": "primeng/primeng",
-      "dform-model": "dform-model"
+      "ng2-currency-mask": "ng2-currency-mask",
+      "dynaform-model": "dynaform-model"
     }
   }
 }
