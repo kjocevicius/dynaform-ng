@@ -23,6 +23,7 @@ import { ContainerRepeatComponent } from './dynamic-control/container-repeat/con
   ],
   exports: [
     BrowserAnimationsModule,
+    CurrencyMaskModule,
     FormsModule,
     ReactiveFormsModule,
 

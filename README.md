@@ -3,7 +3,7 @@
 # dynaform-ng dynamic forms engine
 
 Dynamic forms component based on model in [dynaform-compiler lib](https://bitbucket.org/teraxas/dynaform-ng-compiler).
-Built using PrimeNG components.
+Built using Material components.
 
 [DEMO Page](https://dforms-ng-demo.herokuapp.com/)
 
